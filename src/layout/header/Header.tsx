@@ -2,15 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {Nav} from "../../components/navigation/Nav";
-import {SocialLink} from "../../components/social/SocialLink";
+import {SocialList} from "../../components/social/SocialLink";
+
+
 
 export const Header = () => {
     return (
         <StyledHeader>
-            <Logo/>
             <StyledContainer>
                 <Nav/>
-                <SocialLink/>
+                <SocialList/>
             </StyledContainer>
         </StyledHeader>
     );
@@ -19,7 +20,7 @@ export const Header = () => {
 const StyledHeader = styled.header`
     background-color: transparent;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 80%;
     height: 15vh;
     margin: auto;

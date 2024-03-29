@@ -24,7 +24,7 @@ const StyledNav= styled.nav`
         margin: 0;
         padding: 0;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
     }
 

@@ -8,7 +8,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 export const Main = () => {
     return (
         <StyledMain>
-            <FlexWrapper align={"center"} justify={"space-around"}>
+            <FlexWrapper align={"center"} justify={"space-around"} wrap={"wrap"}>
             <FlexWrapper direction={"column"}>
                 <StyledText> Hi 👋, </StyledText>
                 <StyledText> My name is</StyledText>
@@ -26,9 +26,10 @@ export const Main = () => {
 //
 
 const StyledMain = styled.div`
-min-height: 100vh;
-width: 80%;
-margin: auto;`;
+    min-height: 85vh;
+    height: fit-content;
+    width: 80%;
+    margin: auto;`;
 
 const StyledTitle = styled.h1`
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');

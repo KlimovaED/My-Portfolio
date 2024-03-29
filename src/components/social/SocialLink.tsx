@@ -2,29 +2,29 @@ import React from 'react';
 import {Icon} from "../icon/Icon";
 import styled from "styled-components";
 
-export const SocialLink = () => {
+export const SocialList = () => {
     return (
-        <StyledContainer>
-            <StyledLink href="">
-                <Icon iconId={'iconGitHub'} />
-            </StyledLink>
-            <StyledLink href="">
-                <Icon iconId={'iconIn'}/>
-            </StyledLink>
-            <StyledLink href="">
-                <Icon iconId={'iconTwitter'}/>
-            </StyledLink>
-        </StyledContainer>
+        <SocialItem>
+            <SocialLink href="">
+                <Icon iconId={'iconGitHub'}  width={"30px"} heigth={"30px"} viewBox={"0 0 30 30"} />
+            </SocialLink>
+            <SocialLink href="">
+                <Icon iconId={'iconIn'}  width={"30px"} heigth={"30px"} viewBox={"0 0 30 30"}/>
+            </SocialLink>
+            <SocialLink href="">
+                <Icon iconId={'iconTwitter'}  width={"29px"} heigth={"29px"} viewBox={"2 2 30 30"}/>
+            </SocialLink>
+        </SocialItem>
     );
 };
 
-const StyledContainer = styled.div`
+const SocialItem = styled.div`
     display: flex;
     width: 20%;
     justify-content: space-around;
     align-items: center;
 `;
-const StyledLink = styled.a`
+const SocialLink = styled.a`
     width: 30px;
     height: 30px;
 `;
