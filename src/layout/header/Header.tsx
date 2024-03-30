@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import {Logo} from "../../components/logo/Logo";
 import {Nav} from "../../components/navigation/Nav";
 import {SocialList} from "../../components/social/SocialLink";
 
