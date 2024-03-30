@@ -41,7 +41,7 @@ const StyledProgect = styled.div`
     justify-content: space-between;
     background: rgb(54, 54, 54);
     border-radius: 20px;
-    box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
 `;
 const ProgectContent = styled.div`
@@ -88,6 +88,13 @@ const Link = styled.a`
     letter-spacing: 0;
     text-align: left;
     text-decoration: none;
+    
+    &:hover{
+        border-bottom: 1px solid #bf3fa2;
+        background: linear-gradient(to bottom right, #07ade5 0%, #bf3fa2 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 `;
 
 

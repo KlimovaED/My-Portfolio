@@ -29,7 +29,7 @@ const StyledForm = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:10px;
+    gap:20px;
     width: 100%;
     max-width: 500px;
     margin: 10% auto;
@@ -47,5 +47,12 @@ const  StyledInput = styled.input`
     padding: 0 20px;
     background: rgb(54, 54, 54);
     border-radius: 20px;
-    box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2)
+    box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
+    
+    &:focus{
+        border: 0.5px solid #bf3fa2 ;
+        outline: transparent;
+        border-radius: 20px;
+        box-shadow: -5px 3px 15px 3px #07ade5,  5px 3px 15px 5px #bf3fa2,15px 5px 15px 5px rgba(0,0,0,0) ;
+    }
 `;

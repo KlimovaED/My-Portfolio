@@ -5,13 +5,13 @@ import styled from "styled-components";
 export const SocialList = () => {
     return (
         <SocialItem>
-            <SocialLink href="">
+            <SocialLink aria-label="GitHub" href="">
                 <Icon iconId={'iconGitHub'}  width={"30px"} heigth={"30px"} viewBox={"0 0 30 30"} />
             </SocialLink>
-            <SocialLink href="">
+            <SocialLink aria-label="LinkedIn" href="">
                 <Icon iconId={'iconIn'}  width={"30px"} heigth={"30px"} viewBox={"0 0 30 30"}/>
             </SocialLink>
-            <SocialLink href="">
+            <SocialLink aria-label="Twitter" href="">
                 <Icon iconId={'iconTwitter'}  width={"29px"} heigth={"29px"} viewBox={"2 2 30 30"}/>
             </SocialLink>
         </SocialItem>
