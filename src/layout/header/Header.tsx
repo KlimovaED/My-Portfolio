@@ -6,11 +6,10 @@ import {SocialList} from "../../components/social/SocialLink";
 
 
 
-
-
 export const Header = () => {
     return (
         <StyledHeader>
+            <Logo/>
             <StyledContainer>
                 <Nav/>
                 <SocialList/>
