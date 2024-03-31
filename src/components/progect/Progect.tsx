@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../FlexWrapper";
 import {Icon} from "../icon/Icon";
+import {theme} from "../../styles/Theme";
 
 
 type ProgectPropsTitle = {
@@ -39,35 +40,32 @@ const StyledProgect = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: rgb(54, 54, 54);
+    background: ${theme.colors.secondBg} ;
     border-radius: 20px;
     box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
 `;
 const ProgectContent = styled.div`
     width: 80%;
-    margin:5% auto;
+    margin:0 auto 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap:10px;
-   
+    gap:20px;
+    
 `;
 const ProgectTitle = styled.h4`
-    color: rgb(204, 204, 204);
-    font-family: "Poppins", sans-serif;
+    color: ${theme.colors.fontColor} ;
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 26px;
     text-align: center;
-    margin: 0;
 `;
 
 const ProgectText = styled.p`
-    color: rgb(204, 204, 204);
-    font-family: "Poppins", sans-serif;
-    font-size: 1.1rem;
+    color: ${theme.colors.fontColor} ;
+    font-size: 1rem;
     font-weight:lighter;
     line-height: 26px;
     text-align: left;
@@ -80,18 +78,16 @@ const Image = styled.img`
 
 `;
 const Link = styled.a`
-    color: rgb(255, 255, 255);
-    font-family: "Poppins", sans-serif;
+    color: ${theme.colors.fontColor} ;
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
     letter-spacing: 0;
     text-align: left;
     text-decoration: none;
-    
     &:hover{
-        border-bottom: 1px solid #bf3fa2;
-        background: linear-gradient(to bottom right, #07ade5 0%, #bf3fa2 100%);
+        border-bottom: 1px solid ${theme.colors.primaryColor};
+        background: linear-gradient(to bottom right, ${theme.colors.secondColor} 0%, ${theme.colors.primaryColor} 100%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }

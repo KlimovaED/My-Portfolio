@@ -21,20 +21,11 @@ const StyledNav= styled.nav`
     width: 60%;
 
     ul {
-        margin: 0;
-        padding: 0;
         display: flex;
         justify-content: space-around;
-
     }
-
-    li {
-        list-style-type: none;
-    }
-
+    
     a {
-        text-decoration: none;
-        color: rgba(167, 167, 167, 1);
         font-size: 20px;
     }
 

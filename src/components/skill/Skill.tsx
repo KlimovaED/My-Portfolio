@@ -1,6 +1,7 @@
 import React from 'react';
 import {Icon} from "../icon/Icon";
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 type SkillPropsType = {
     iconId:string
@@ -25,8 +26,7 @@ const StyledSkill = styled.div`
 `;
 
 const SkillTitle= styled.h3`
-    color: rgb(204, 204, 204);
-    font-family: "Poppins", sans-serif;
+    color: ${theme.colors.fontColor} ;
     font-size: 1rem;
     font-weight: 700;
     line-height: 26px;

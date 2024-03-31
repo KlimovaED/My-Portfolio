@@ -1,5 +1,4 @@
 import './App.css';
-import styled from 'styled-components';
 import {Header} from "./layout/header/Header";
 import {Main} from "./layout/sections/main/Main";
 import {Skills} from "./layout/sections/skills/Skills";
@@ -10,19 +9,17 @@ import {Footer} from "./layout/footer/Footer";
 
 function App() {
     return (
-        <StyledApp>
+        <div>
             <Header/>
             <Main/>
             <Skills/>
             <Progects/>
             <Contatti/>
             <Footer/>
-        </StyledApp>
+        </div>
     );
 }
 
 export default App;
 
-const StyledApp = styled.div`
-background-color: black;
-height: fit-content;`;
+

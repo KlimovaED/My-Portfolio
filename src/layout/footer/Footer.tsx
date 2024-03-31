@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {SocialList} from "../../components/social/SocialLink";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Nav} from "../../components/navigation/Nav";
+import {theme} from "../../styles/Theme";
 
 export const Footer = () => {
     return (
@@ -26,12 +27,12 @@ export const Footer = () => {
 
 const StyledFooter= styled.footer`
     width: 80%;
-    min-height: 25vh;
+    min-height: 15vh;
     margin: auto;
     height: fit-content;
     display: flex;
     flex-direction: column;
-    gap:5px;
+    gap:15px;
 `;
 
 const FooterContent = styled.div`
@@ -42,9 +43,8 @@ const FooterContent = styled.div`
     justify-content: space-between;
 `;
 const Name = styled.h5`
-    font-family: "Poppins", sans-serif;
     font-size: 1.2rem;
-    color: rgba(217, 217, 217, 1);
+    color: ${theme.colors.fontColor} ;
 `;
 const NameColor = styled.span`
     background: linear-gradient(to bottom right, #07ade5 0%, #bf3fa2 100%);
@@ -52,17 +52,15 @@ const NameColor = styled.span`
     -webkit-text-fill-color: transparent;
 `;
 const Number = styled.span`
-    color: rgba(217, 217, 217, 1);
-    width: 160px;
-    font-family: "Poppins", sans-serif;
+    color: ${theme.colors.fontColor} ;
+    width: 180px;
     font-size: 1rem;
     font-weight:lighter;
     line-height: 26px;
 `;
 
 const Email=styled.span`
-    color: rgba(217, 217, 217, 1);
-    font-family: "Poppins", sans-serif;
+    color: ${theme.colors.fontColor} ;
     font-size: 1rem;
     font-weight:lighter;
     line-height: 26px;
@@ -75,8 +73,7 @@ const Line = styled.hr`
 `;
 
 const FooterText = styled.span`
-    color: rgba(217, 217, 217, 1);
-    font-family: "Poppins", sans-serif;
+    color: ${theme.colors.fontColor} ;
     font-size: 1rem;
     font-weight:lighter;
     line-height: 26px;

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
+import {theme} from "../../../styles/Theme";
 
 export const Contatti = () => {
     return (
@@ -13,7 +14,6 @@ export const Contatti = () => {
                 <StyledInput placeholder={"Message..."} as={"textarea"}/>
                 <Button type={"submit"}>Send message</Button>
             </StyledForm>
-
         </StyledContatti>
     );
 };
@@ -38,21 +38,20 @@ const StyledForm = styled.form`
 const  StyledInput = styled.input`
     width: 100%;
     height: 50px;
-    font-family: "Poppins", sans-serif;
     font-size: 1rem;
     font-weight:lighter;
     line-height: 26px;
     color: rgba(217, 217, 217, 1);
     border: none;
     padding: 0 20px;
-    background: rgb(54, 54, 54);
+    background: ${theme.colors.secondBg};
     border-radius: 20px;
     box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
     
     &:focus{
-        border: 0.5px solid #bf3fa2 ;
+        border: 0.5px solid ${theme.colors.primaryColor} ;
         outline: transparent;
         border-radius: 20px;
-        box-shadow: -5px 3px 15px 3px #07ade5,  5px 3px 15px 5px #bf3fa2,15px 5px 15px 5px rgba(0,0,0,0) ;
+        box-shadow: -5px 3px 15px 3px ${theme.colors.secondColor},  5px 3px 15px 5px ${theme.colors.primaryColor},15px 5px 15px 5px rgba(0,0,0,0) ;
     }
 `;

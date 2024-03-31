@@ -9,7 +9,6 @@ export  const Button = styled.button`
     border-radius: 20px;
     background: linear-gradient(90.00deg, rgb(19, 176, 245),rgb(231, 15, 170));
     color: black;
-    font-family: "Poppins", sans-serif;
     font-size: 1.1rem;
     font-weight:lighter;
     line-height: 26px;
