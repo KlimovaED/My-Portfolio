@@ -33,6 +33,11 @@ const StyledForm = styled.form`
     width: 100%;
     max-width: 500px;
     margin: 10% auto;
+    
+    textarea{
+        resize: none;
+        height: 155px;
+    }
 `;
 
 const  StyledInput = styled.input`
@@ -53,5 +58,8 @@ const  StyledInput = styled.input`
         outline: transparent;
         border-radius: 20px;
         box-shadow: -5px 3px 15px 3px ${theme.colors.secondColor},  5px 3px 15px 5px ${theme.colors.primaryColor},15px 5px 15px 5px rgba(0,0,0,0) ;
+    }
+    &:focus-visible{
+        outline: 0.5px solid ${theme.colors.primaryColor};
     }
 `;

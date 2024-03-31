@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import {Nav} from "../../components/navigation/Nav";
 import {SocialList} from "../../components/social/SocialLink";
+import {HeaderMenu} from "./headerMenu/HeaderMenu";
 
 
 
@@ -10,7 +10,7 @@ export const Header = () => {
         <StyledHeader>
 
             <StyledContainer>
-                <Nav/>
+                <HeaderMenu/>
                 <SocialList/>
             </StyledContainer>
         </StyledHeader>

@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
-
-
-export const Nav = () => {
+export const HeaderMenu = () => {
     return (
         <StyledNav>
             <ul>
@@ -18,7 +16,7 @@ export const Nav = () => {
 };
 
 const StyledNav= styled.nav`
-    width: 40%;
+    width: 60%;
 
     ul {
         display: flex;
@@ -31,10 +29,8 @@ const ListItem = styled.li`
 
 const Link = styled.a`
     font-family:"DM Sans", sans-serif; 
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
-    letter-spacing: 0;
+    font-weight: 500;
+    font-size: 20px;
     &:hover {
         border-bottom: 1px solid #bf3fa2;
         background: linear-gradient(to bottom right, #07ade5 0%, #bf3fa2 100%);
@@ -42,4 +38,3 @@ const Link = styled.a`
         -webkit-text-fill-color: transparent;
     }
 `;
-

@@ -25,10 +25,10 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-    min-height: 70vh;
+    min-height: 50vh;
     height: fit-content;
     width: 90%;
-    margin: auto;
+    margin: 10% auto 0;
     display: flex;
     flex-direction: column;
     gap: 70px;
