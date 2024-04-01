@@ -1,9 +1,13 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
+import {SocialList} from "../../../components/social/SocialLink";
 
-export const HeaderMenu = () => {
+
+
+export const HeaderMenuMobile = () => {
     return (
+        <StyledMobileMenu isOpen={true}>
         <StyledNav>
             <ul>
                 <ListItem><Link href="">Home</Link></ListItem>
@@ -13,16 +17,36 @@ export const HeaderMenu = () => {
                 <ListItem><Link href="">Contact</Link></ListItem>
             </ul>
         </StyledNav>
+            <SocialList/>
+        </StyledMobileMenu>
     );
 };
-
+const StyledMobileMenu= styled.div<{isOpen:boolean}>`
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background-color: ${theme.colors.secondBg};
+    display: none;
+    flex-direction: column;
+    gap:70px;
+    align-items: center;
+    justify-content: center;
+    
+    ${props => props.isOpen && css<{isOpen:boolean}>`
+    display: flex;
+    `}
+`;
 const StyledNav= styled.nav`
-    width: 70%;
+    width: 100%;
 
     ul {
         display: flex;
-        justify-content: space-around;
-        gap:2%;
+        flex-direction: column;
+       align-items: center;
+        gap:30px;
     }
    
 `;

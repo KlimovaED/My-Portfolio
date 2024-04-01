@@ -6,5 +6,9 @@ export const theme = {
         primaryColor:"#bf3fa2",
         secondColor:"#07ade5"
 
+    },
+    media:{
+        tablet:"screen and (max-width:768px)",
+        mobile:"screen and (max-width:576px)",
     }
 }
