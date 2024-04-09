@@ -32,6 +32,8 @@ const StyledSkills = styled.section`
     display: flex;
     flex-direction: column;
     gap: 70px;
+    
+    
 `;
 
 

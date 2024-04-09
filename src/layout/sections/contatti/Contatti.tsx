@@ -23,6 +23,10 @@ const StyledContatti = styled.section`
     margin: 10% auto 0;
     min-height: 100vh;
     height: fit-content;
+
+    @media ${theme.media.mobile} {
+        display: none;
+    }
 `;
 
 const StyledForm = styled.form`

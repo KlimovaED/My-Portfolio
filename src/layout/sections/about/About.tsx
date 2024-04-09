@@ -50,7 +50,15 @@ const StyledAbout = styled.section`
       background-size: 900px 900px;
       transform: scaleX(-1);
       opacity: 0.5;
+
+      @media ${theme.media.mobile} {
+          width: 300px;
+      }
   }
+
+    @media ${theme.media.mobile} {
+        width: 90%;
+    }
 `;
 const StyledContainer = styled.div`
     width: 60%;
@@ -59,6 +67,10 @@ const StyledContainer = styled.div`
     flex-direction: column;
     align-items: start;
     gap: 38px;
+    @media ${theme.media.mobile} {
+        width: 90%;
+    }
+    
 `;
 const StyledTitle = styled.h3`
     color: ${theme.colors.fontColor};

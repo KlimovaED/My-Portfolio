@@ -7,7 +7,7 @@ import {SocialList} from "../../../components/social/SocialLink";
 
 export const HeaderMenuMobile = () => {
     return (
-        <StyledMobileMenu isOpen={true}>
+        <StyledMobileMenu isOpen={false}>
         <StyledNav>
             <ul>
                 <ListItem><Link href="">Home</Link></ListItem>

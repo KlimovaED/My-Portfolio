@@ -33,6 +33,10 @@ const StyledFooter= styled.footer`
     display: flex;
     flex-direction: column;
     gap:15px;
+
+    @media ${theme.media.mobile} {
+        display: none;
+    }
 `;
 
 const FooterContent = styled.div`

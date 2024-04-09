@@ -5,6 +5,7 @@ import {Progect} from "../../../components/progect/Progect";
 import progImg1 from '../../../assets/images/projects/project1.webp';
 import progImg2 from '../../../assets/images/projects/project2.webp';
 import progImg3 from '../../../assets/images/projects/project3.webp';
+import {theme} from "../../../styles/Theme";
 
 
 export const Progects = () => {
@@ -31,6 +32,10 @@ const StyledProgects = styled.section`
     margin: auto;
     min-height: 100vh;
     height: fit-content;
+
+    @media ${theme.media.mobile} {
+        display: none;
+    }
 `;
 
 const StyledContent = styled.div`

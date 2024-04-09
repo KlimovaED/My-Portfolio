@@ -10,7 +10,7 @@ import {HeaderMenuMobile} from "./headerMenuMobile/HeaderMenuMobile";
 export const Header = () => {
     return (
         <StyledHeader>
-            <ButtonMobile isOpen={true}>
+            <ButtonMobile isOpen={false}>
                 <span></span>
             </ButtonMobile>
             <MobileContainer isOpen={true}>
