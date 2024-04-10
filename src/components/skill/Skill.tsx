@@ -2,6 +2,7 @@ import React from 'react';
 import {Icon} from "../icon/Icon";
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
+import {font} from "../../styles/Common";
 
 type SkillPropsType = {
     iconId:string
@@ -26,10 +27,10 @@ const StyledSkill = styled.div`
 `;
 
 const SkillTitle= styled.h3`
-    color: ${theme.colors.fontColor} ;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 26px;
+    ${font({weight: 500, Fmax: 18,Fmin:16,color: `${theme.colors.fontColor}`,lineHeight:1.5 })};
+   // color: ${theme.colors.fontColor} ;
+   // font-size: 1rem;
+   // line-height: 26px;
     text-align: center;`;
 
 
