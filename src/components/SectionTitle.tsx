@@ -7,4 +7,7 @@ export const SectionTitle = styled.h2`
     font-weight: 700;
     line-height: 70px;
     text-align: center;
+    @media ${theme.media.mobile} {
+        font-size: 2rem;
+    }
 `;

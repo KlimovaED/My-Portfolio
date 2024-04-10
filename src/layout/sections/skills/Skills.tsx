@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Skill} from "../../../components/skill/Skill";
+import {theme} from "../../../styles/Theme";
 
 export const Skills = () => {
     return (
@@ -28,12 +29,14 @@ const StyledSkills = styled.section`
     min-height: 50vh;
     height: fit-content;
     width: 90%;
-    margin: 10% auto 0;
+    margin:  auto ;
     display: flex;
     flex-direction: column;
     gap: 70px;
-    
-    
+
+    @media ${theme.media.mobile} {
+       gap:30px;
+    }
 `;
 
 
