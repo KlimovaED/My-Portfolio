@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 
 
@@ -23,6 +24,10 @@ const StyledNav= styled.nav`
     ul {
         display: flex;
         justify-content: space-around;
+        gap:2%;
+    }
+    @media ${theme.media.mobile} {
+        display: none;
     }
 `;
 

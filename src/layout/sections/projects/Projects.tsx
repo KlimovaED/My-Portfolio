@@ -1,41 +1,41 @@
 import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
-import {Progect} from "../../../components/progect/Progect";
+import {Project} from "../../../components/project/Project";
 import progImg1 from '../../../assets/images/projects/project1.webp';
 import progImg2 from '../../../assets/images/projects/project2.webp';
 import progImg3 from '../../../assets/images/projects/project3.webp';
 import {theme} from "../../../styles/Theme";
 
 
-export const Progects = () => {
+export const Projects = () => {
     return (
-        <StyledProgects>
+        <StyledProjects>
             <SectionTitle>Progects</SectionTitle>
             <StyledContent>
-                <Progect title={"Project Tile goes here"}
+                <Project title={"Project Tile goes here"}
                          description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                         src={progImg1}/>
-                <Progect title={"Project Tile goes here"}
+                         src={progImg1}
+                stack={" HTML , JavaScript, SASS, React"}/>
+                <Project title={"Project Tile goes here"}
                          description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                         src={progImg2}/>
-                <Progect title={"Project Tile goes here"}
+                         src={progImg2}
+                         stack={" HTML , JavaScript, SASS, React"}/>
+                <Project title={"Project Tile goes here"}
                          description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                         src={progImg3}/>
+                         src={progImg3}
+                         stack={" HTML , JavaScript, SASS, React"}/>
             </StyledContent>
-        </StyledProgects>
+        </StyledProjects>
     );
 };
 
-const StyledProgects = styled.section`
-    width: 80%;
+const StyledProjects = styled.section`
+    width: 90%;
     margin: auto;
     min-height: 100vh;
     height: fit-content;
-
-    @media ${theme.media.mobile} {
-        display: none;
-    }
+    
 `;
 
 const StyledContent = styled.div`

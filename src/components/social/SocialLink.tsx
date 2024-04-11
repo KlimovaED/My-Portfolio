@@ -1,6 +1,7 @@
 import React from 'react';
 import {Icon} from "../icon/Icon";
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 export const SocialList = () => {
     return (
@@ -23,6 +24,9 @@ const SocialItem = styled.div`
     width: 20%;
     justify-content: space-around;
     align-items: center;
+    @media ${theme.media.mobile} {
+        width: 80%;
+    }
 `;
 const SocialLink = styled.a`
     width: 30px;

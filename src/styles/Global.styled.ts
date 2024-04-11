@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
     section{
         padding:100px 0;
         @media ${theme.media.mobile} {
-            padding:80px 0;
+            padding:70px 0;
         }
     }
 `;

@@ -27,7 +27,7 @@ export const Main = () => {
 };
 
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
     min-height: 85vh;
     height: fit-content;
     width: 80%;

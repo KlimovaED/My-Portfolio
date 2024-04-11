@@ -9,5 +9,6 @@ export const SectionTitle = styled.h2`
     text-align: center;
     @media ${theme.media.mobile} {
         font-size: 2rem;
+        line-height: 50px;
     }
 `;

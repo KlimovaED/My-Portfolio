@@ -16,9 +16,9 @@ export const Skills = () => {
                 <Skill iconId={"codeVs"} title={"VisualCode"}/>
                 <Skill iconId={"codeReact"} title={"React"}/>
                 <Skill iconId={"codeGit"} title={"Git"}/>
-                <Skill iconId={"codeBootstrap"} title={"Bootstrap"}/>
-                <Skill iconId={"codeGitHub"} title={"GitHub"} />
-                <Skill iconId={"codeSass"} title={"Sass"}/>
+                <Skill iconId={"codeBootstrap"} title={"Bootstrap"} vievBox={"-5 -3 100 100"}/>
+                <Skill iconId={"codeGitHub"} title={"GitHub"} vievBox={"-10 -5 110 110"}/>
+                <Skill iconId={"codeSass"} title={"Sass"} vievBox={"-10 -5 110 110"}/>
             </FlexWrapper>
 
         </StyledSkills>
