@@ -4,6 +4,7 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {Place} from "../../../components/place/Place";
 import {theme} from "../../../styles/Theme";
 import fon from '../../../assets/images/drawing.svg';
+import {font} from "../../../styles/Common";
 
 export const About = () => {
     return (
@@ -52,7 +53,7 @@ const StyledAbout = styled.section`
       opacity: 0.5;
 
       @media ${theme.media.mobile} {
-          width: 300px;
+         display: none;
       }
   }
 
@@ -68,14 +69,12 @@ const StyledContainer = styled.div`
     align-items: start;
     gap: 38px;
     @media ${theme.media.mobile} {
-        width: 90%;
+        width: 100%;
     }
     
 `;
 const StyledTitle = styled.h3`
-    color: ${theme.colors.fontColor};
-    font-size: 2rem;
-    font-weight: 700;
+    ${font({weight: 700, Fmax: 42,Fmin:30,color: `${theme.colors.fontColor}`})};
     line-height: 52px;
     letter-spacing: -0.4px;
     text-align: left;

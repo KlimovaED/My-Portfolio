@@ -7,6 +7,14 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
+    *::-webkit-scrollbar {
+      width: 20px;
+    }
+    *::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom right, ${theme.colors.secondColor} 0%, ${theme.colors.primaryColor} 100%);
+        border: 5px solid black;
+        border-radius: 20px;
+    }
     
     body {
         background: ${theme.colors.background};
@@ -19,6 +27,7 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
+    
     a{
         color: ${theme.colors.fontColor};
         text-decoration: none;

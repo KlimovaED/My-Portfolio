@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Icon} from "../icon/Icon";
 import {theme} from "../../styles/Theme";
 import {FlexWrapper} from "../FlexWrapper";
+import {font} from "../../styles/Common";
 
 type PlacePropsType = {
     name: string
@@ -48,10 +49,9 @@ const StyledPlace = styled.div`
 `;
 
 const Name = styled.h4`
+    ${font({weight: 400, Fmax: 20,Fmin:17,color: `${theme.colors.fontColor}`})};
     width: 70%;
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: rgba(217, 217, 217, 1);
+   
 `;
 const Conditions = styled.span`
     min-width: 110px;
@@ -61,28 +61,28 @@ const Conditions = styled.span`
     padding: 5px 10px;
     background: ${theme.colors.primaryColor};
     border-radius: 20px;
+    @media ${theme.media.mobile} {
+        min-width: 90px;
+    }
 `;
 const Organization = styled.span`
-   color: ${theme.colors.fontColor};
+    ${font({weight: 500, Fmax: 12,Fmin:11,color: `${theme.colors.fontColor}`})};
     opacity: 0.7;
-    font-weight: 500;
-    font-size: 0.7rem;
     line-height: 28px;
     text-align: left;
+    @media ${theme.media.mobile} {
+        line-height:15px;
+    }
 `;
 const Location = styled.span`
-    color: ${theme.colors.fontColor};
+    ${font({weight: 500, Fmax: 12,Fmin:11,color: `${theme.colors.fontColor}`})};
     opacity: 0.7;
-    font-weight: 500;
-    font-size: 0.7rem;
     line-height: 28px;
     text-align: left;
 `;
 const Dates = styled.span`
-    color: ${theme.colors.fontColor};
+    ${font({weight: 500, Fmax: 12,Fmin:11,color: `${theme.colors.fontColor}`})};
     opacity: 0.7;
-    font-weight: 500;
-    font-size: 0.7rem;
     line-height: 28px;
     text-align: left;
 `;

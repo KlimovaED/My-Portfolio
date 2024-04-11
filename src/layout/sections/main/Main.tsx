@@ -10,7 +10,7 @@ import {font} from "../../../styles/Common";
 export const Main = () => {
     return (
         <StyledMain>
-            <FlexWrapper align={"center"} justify={"space-around"} wrap={"wrap"}>
+            <FlexWrapper align={"center"} justify={"space-around"} wrap={"wrap"} gap={"3%"}>
             <FlexWrapper direction={"column"}>
                 <StyledText> Hi 👋, </StyledText>
                 <StyledText> My name is</StyledText>
@@ -33,6 +33,7 @@ const StyledMain = styled.section`
     width: 80%;
     margin: auto;
     background: black;
+    padding-top: 0;
     @media ${theme.media.mobile} {
         width: 90%;
         margin: auto;
@@ -41,7 +42,7 @@ const StyledMain = styled.section`
 `;
 
 const StyledTitle = styled.h1`
-    ${font({weight: 700, Fmax: 50,Fmin:30,color: "rgba(217, 217, 217, 1)"})};
+    ${font({weight: 700, Fmax: 58,Fmin:30,color: "rgba(217, 217, 217, 1)"})};
     letter-spacing: -1px;
     
     @media ${theme.media.mobile} {
@@ -50,7 +51,7 @@ const StyledTitle = styled.h1`
   `;
 
 const StyledName = styled.h2`
-    ${font({weight: 700, Fmax: 50,Fmin:30})};
+    ${font({weight: 700, Fmax: 58,Fmin:30})};
     background: linear-gradient(to bottom right, ${theme.colors.secondColor} 0%, ${theme.colors.primaryColor} 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -58,7 +59,7 @@ const StyledName = styled.h2`
 `;
 
 const StyledText = styled.span`
-    ${font({weight: 700, Fmax: 50,Fmin:30,color: "rgba(217, 217, 217, 1)"})};
+    ${font({weight: 700, Fmax: 58,Fmin:30,color: "rgba(217, 217, 217, 1)"})};
     letter-spacing: -1px;
     @media ${theme.media.mobile} {
         line-height:45px;
@@ -67,8 +68,8 @@ const StyledText = styled.span`
 
 
 const Photo = styled.img`
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 320px;
     object-fit: cover;
     position: absolute;
     border-radius: 230px;
@@ -82,8 +83,9 @@ const Photo = styled.img`
 `;
 
 const Figura = styled.img`
-    width: 450px;
-    height: 450px;
+    width: 500px;
+    height: 500px;
+ 
     position: relative;
     @media ${theme.media.mobile} {
         width: 350px;

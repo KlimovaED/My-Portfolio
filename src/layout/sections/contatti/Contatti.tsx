@@ -26,6 +26,7 @@ const StyledContatti = styled.section`
     height: fit-content;
     @media ${theme.media.mobile} {
         width: 90%;
+        min-height: 80vh;
     }
 `;
 
@@ -36,7 +37,7 @@ const StyledForm = styled.form`
     gap:20px;
     width: 100%;
     max-width: 500px;
-    margin: 10% auto;
+    margin: 10% auto 0;
     
     textarea{
         resize: none;
