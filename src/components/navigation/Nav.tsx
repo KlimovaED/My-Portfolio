@@ -4,7 +4,7 @@ import {theme} from "../../styles/Theme";
 
 
 
-export const Nav = () => {
+export const Nav: React.FC= () => {
     return (
         <StyledNav>
             <ul>

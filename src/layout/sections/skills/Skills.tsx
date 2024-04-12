@@ -5,22 +5,53 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {Skill} from "../../../components/skill/Skill";
 import {theme} from "../../../styles/Theme";
 
+
+const skillData = [
+    {
+        iconId:"codeJs",
+        title:"JavaScript"
+    },
+    {
+        iconId:"codeCSS",
+        title:"CSS"
+    },
+    {
+        iconId:"codeHtml",
+        title:"HTML"
+    }, {
+        iconId:"codeVs",
+        title:"VisualCode"
+    }, {
+        iconId:"codeReact",
+        title:"React"
+    }, {
+        iconId:"codeGit",
+        title:"Git"
+    }, {
+        iconId:"codeBootstrap",
+        title:"Bootstrap",
+        vievBox:"-5 -3 100 100"
+    }, {
+        iconId:"codeGitHub",
+        title:"GitHub",
+        vievBox:"-10 -5 110 110"
+    }, {
+        iconId:"codeSass",
+        title:"Sass",
+        vievBox:"-10 -5 110 110"
+    }
+]
 export const Skills = () => {
     return (
         <StyledSkills>
             <SectionTitle>My Skills</SectionTitle>
             <FlexWrapper justify={"center"} align={"center"} wrap={"wrap"} gap={"30px 3%"}>
-                <Skill iconId={"codeJs"} title={"JavaScript"}/>
-                <Skill iconId={"codeCSS"} title={"CSS"}/>
-                <Skill iconId={"codeHtml"} title={"HTML"}/>
-                <Skill iconId={"codeVs"} title={"VisualCode"}/>
-                <Skill iconId={"codeReact"} title={"React"}/>
-                <Skill iconId={"codeGit"} title={"Git"}/>
-                <Skill iconId={"codeBootstrap"} title={"Bootstrap"} vievBox={"-5 -3 100 100"}/>
-                <Skill iconId={"codeGitHub"} title={"GitHub"} vievBox={"-10 -5 110 110"}/>
-                <Skill iconId={"codeSass"} title={"Sass"} vievBox={"-10 -5 110 110"}/>
+                {
+                    skillData.map((s,index)=>{
+                        return <Skill iconId={s.iconId} title={s.title} vievBox={s.vievBox} key={index}/>
+                    })
+                }
             </FlexWrapper>
-
         </StyledSkills>
     );
 };

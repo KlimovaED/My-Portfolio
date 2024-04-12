@@ -1,116 +1,30 @@
-import React from "react";
-import styled, {css} from "styled-components";
+import React, {useState, useEffect} from "react";
 import {SocialList} from "../../components/social/SocialLink";
-import {HeaderMenu} from "./headerMenu/HeaderMenu";
-import {theme} from "../../styles/Theme";
-import {HeaderMenuMobile} from "./headerMenuMobile/HeaderMenuMobile";
+import {HeaderMenuDesktop} from "./HeaderMenu/headerMenuDesktop/HeaderMenuDesktop";
+import {HeaderMenuMobile} from "./HeaderMenu/headerMenuMobile/HeaderMenuMobile";
+import {S} from './Header_Styles';
 
 
+export const Header: React.FC = () => {
 
-export const Header = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+    const breakpoint = 768;
+    useEffect(() => {
+        window.addEventListener("resize", () => setWidth(window.innerWidth));
+    }, []);
+
     return (
-        <StyledHeader>
-            <ButtonMobile isOpen={false}>
-                <span></span>
-            </ButtonMobile>
-            <MobileContainer isOpen={true}>
-            <HeaderMenuMobile />
-            </MobileContainer>
-            <StyledContainer>
-                <HeaderMenu/>
+        <S.Header>
+            { width < breakpoint ?<><S.ButtonMobile isOpen={false}> <span></span> </S.ButtonMobile>
+                <S.MobileContainer isOpen={true}> <HeaderMenuMobile/> </S.MobileContainer></>
+                :
+                <S.Container>
+                <HeaderMenuDesktop/>
                 <SocialList/>
-            </StyledContainer>
-        </StyledHeader>
-    );
+                </S.Container>
+            }
+                </S.Header>
+
+);
 };
 
-const StyledHeader = styled.header`
-    background-color: transparent;
-    display: flex;
-    justify-content: flex-end;
-    width: 80%;
-    height: 15vh;
-    margin: auto;
-    overflow: hidden;
-`;
-
-const ButtonMobile=styled.button<{isOpen:boolean}>`
-    display: none;
-    position: fixed;
-    top: -100px;
-    right: -100px;
-    width: 200px;
-    height: 200px;
-    border: none;
-    background: transparent;
-    z-index: 99999;
-    @media ${theme.media.tablet}{
-        display: block;
-        
-    }
-    
-    span{
-        display: block;
-        position: absolute;
-        left: 40px;
-        bottom: 50px;
-        width: 36px;
-        height: 2px;
-        background-color: ${theme.colors.fontColor};
-
-        ${props => props.isOpen && css<{isOpen:boolean}>`
-            background-color: rgba(255, 255, 255, 0);
-        `}
-        
-        &::before{
-            content: "";
-            display: block;
-            position: absolute;
-            width: 36px;
-            height: 2px;
-            background-color: ${theme.colors.fontColor};
-            transform: translateY(-10px);
-
-            ${props => props.isOpen && css<{isOpen:boolean}>`
-                transform:rotate(-45deg) translateY(0);
-        `}
-        }
-        &::after{
-            content: "";
-            display: block;
-            position: absolute;
-            width: 24px;
-            height: 2px;
-            background-color: ${theme.colors.fontColor};
-            transform: translateY(10px);
-
-            ${props => props.isOpen && css<{isOpen:boolean}>`
-                transform:rotate(45deg) translateY(0);
-                width: 36px;
-        `}
-        }
-    }
-`;
-const MobileContainer = styled.div<{isOpen:boolean}>`
-    display: none;
-    
-    ${props => props.isOpen && css<{isOpen:boolean}>`
-    
-    `}
-
-    @media ${theme.media.tablet}{
-    display: flex;
-}
-`;
-
-
-const StyledContainer = styled.div`
-    width: 80%;
-    display: flex;
-    justify-content: flex-end;
-    gap:3%;
-    align-items: center;
-    @media ${theme.media.tablet}{
-        display: none;
-    }
-`;
