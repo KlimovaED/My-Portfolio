@@ -65,17 +65,6 @@ const ButtonMobile=styled.button<{isOpen:boolean}>`
         }
     }
 `;
-const MobileContainer = styled.div<{isOpen:boolean}>`
-    display: none;
-    
-    ${props => props.isOpen && css<{isOpen:boolean}>`
-    
-    `}
-
-   
-}
-`;
-
 
 const Container = styled.div`
     width: 80%;
@@ -87,5 +76,5 @@ const Container = styled.div`
 `;
 
 export const S = {
-    Header, Container,ButtonMobile,MobileContainer
+    Header, Container,ButtonMobile
 }

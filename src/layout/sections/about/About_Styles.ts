@@ -39,7 +39,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: start;
     gap: 38px;
-    @media ${theme.media.mobile} {
+    @media ${theme.media.tablet} {
         width: 100%;
     }
     
@@ -55,4 +55,4 @@ export const S = {
     Title,
     Container,
     About
-}
+};

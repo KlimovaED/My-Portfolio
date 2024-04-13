@@ -3,7 +3,7 @@ import {Icon} from "../icon/Icon";
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 
-export const SocialList = () => {
+export const SocialList:React.FC = () => {
     return (
         <SocialItem>
             <SocialLink aria-label="GitHub" href="">

@@ -60,13 +60,13 @@ const Photo = styled.img`
 const Figura = styled.img`
     width: 500px;
     height: 500px;
- 
     position: relative;
     @media ${theme.media.mobile} {
         width: 350px;
         height: 350px;
         margin-top: 10%;
         margin-left: -30px;
+        
     }
 `;
 

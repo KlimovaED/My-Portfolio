@@ -13,7 +13,7 @@ type ProjectPropsTitle = {
     linkGitHub:string
     link:string
 };
-export const Project = (props: ProjectPropsTitle) => {
+export const Project:React.FC<ProjectPropsTitle> = (props: ProjectPropsTitle) => {
     return (
         <S.Project>
             <S.Image src={props.src} alt=""/>

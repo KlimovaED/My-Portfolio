@@ -6,7 +6,11 @@ import {S} from './Header_Styles';
 
 
 export const Header: React.FC = () => {
+    const [menuIsOpen, setMenuIsOpen] = useState(false);
 
+    const onBurgerBtnClick = () => {
+        setMenuIsOpen(!menuIsOpen)
+    }
     const [width, setWidth] = useState(window.innerWidth);
     const breakpoint = 768;
     useEffect(() => {
@@ -15,16 +19,17 @@ export const Header: React.FC = () => {
 
     return (
         <S.Header>
-            { width < breakpoint ?<><S.ButtonMobile isOpen={false}> <span></span> </S.ButtonMobile>
-                <S.MobileContainer isOpen={true}> <HeaderMenuMobile/> </S.MobileContainer></>
+            {width < breakpoint ? <><S.ButtonMobile isOpen={menuIsOpen} onClick={onBurgerBtnClick}> <span></span>
+                </S.ButtonMobile>
+                    <HeaderMenuMobile isOpen={menuIsOpen} /></>
                 :
                 <S.Container>
-                <HeaderMenuDesktop/>
-                <SocialList/>
+                    <HeaderMenuDesktop/>
+                    <SocialList/>
                 </S.Container>
             }
-                </S.Header>
+        </S.Header>
 
-);
+    );
 };
 
