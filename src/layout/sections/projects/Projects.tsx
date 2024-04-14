@@ -38,7 +38,7 @@ const ProjectsData = [
 ]
 export const Projects :React.FC= () => {
     return (
-        <StyledProjects>
+        <StyledProjects id="projects">
             <SectionTitle>Progects</SectionTitle>
             <StyledContent>
                 {

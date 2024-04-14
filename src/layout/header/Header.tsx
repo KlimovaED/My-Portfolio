@@ -17,14 +17,32 @@ export const Header: React.FC = () => {
         window.addEventListener("resize", () => setWidth(window.innerWidth));
     }, []);
 
+    const MenuItems=[{
+        title: "Home",
+        href: "home"
+    },
+        {
+            title: "About",
+            href: "about"
+        }, {
+            title: "Skills",
+            href: "skills"
+        }, {
+            title: "Projects",
+            href: "projects"
+        }, {
+            title: "Contact",
+            href: "contact"
+        }]
+
     return (
         <S.Header>
             {width < breakpoint ? <><S.ButtonMobile isOpen={menuIsOpen} onClick={onBurgerBtnClick}> <span></span>
                 </S.ButtonMobile>
-                    <HeaderMenuMobile isOpen={menuIsOpen} /></>
+                    <HeaderMenuMobile isOpen={menuIsOpen} items={MenuItems}/></>
                 :
                 <S.Container>
-                    <HeaderMenuDesktop/>
+                    <HeaderMenuDesktop items={MenuItems}/>
                     <SocialList/>
                 </S.Container>
             }

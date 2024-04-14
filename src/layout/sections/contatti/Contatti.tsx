@@ -4,9 +4,9 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
 
 
-export const Contatti:React.FC = () => {
+export const Contact:React.FC = () => {
     return (
-        <S.Contatti>
+        <S.Contact id="contact">
             <SectionTitle>For any questions please mail me:</SectionTitle>
             <S.Form>
                 <S.Input placeholder={"Your name"}/>
@@ -14,7 +14,7 @@ export const Contatti:React.FC = () => {
                 <S.Input placeholder={"Message..."} as={"textarea"}/>
                 <Button type={"submit"}>Send message</Button>
             </S.Form>
-        </S.Contatti>
+        </S.Contact>
     );
 };
 

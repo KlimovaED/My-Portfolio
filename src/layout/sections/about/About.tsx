@@ -27,7 +27,7 @@ const placeData = [
 ]
 export const About:React.FC = () => {
     return (
-        <S.About>
+        <S.About id="about">
             <S.Container>
                 <SectionTitle>About Me</SectionTitle>
                 <S.Title>Work Experience</S.Title>

@@ -1,6 +1,7 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {font} from "../../../styles/Common";
+import {Link} from "react-scroll";
 
 const MobileMenu= styled.div<{isOpen:boolean}>`
     position: fixed;
@@ -34,8 +35,9 @@ const MobileNav= styled.nav`
 const MenuItem = styled.li`
 `;
 
-const Link = styled.a`
+const NavLink = styled(Link)`
     ${font({family:"DM Sans",weight: 500, Fmax:20, Fmin:20, color: `${theme.colors.fontColor}`})};
+    cursor: pointer;
  
     &:hover {
         border-bottom: 1px solid #bf3fa2;
@@ -55,5 +57,5 @@ const DesktopNav= styled.nav`
     }
 `;
 export const S = {
-    Link,MenuItem,MobileMenu,MobileNav,DesktopNav
+    NavLink,MenuItem,MobileMenu,MobileNav,DesktopNav
 }

@@ -1,21 +1,28 @@
 import React from 'react';
-import styled from "styled-components";
 import {S} from './../HeaderMenu_Styles';
 
-export const HeaderMenuDesktop: React.FC= () => {
+
+
+type ItemPropsType = {
+        title: string,
+        href: string
+};
+type MenuProps = {
+    items: ItemPropsType[];
+};
+
+
+export const HeaderMenuDesktop = ({ items }: MenuProps) => {
     return (
         <S.DesktopNav>
             <ul>
-                <S.MenuItem><S.Link href="">Home</S.Link></S.MenuItem>
-                <S.MenuItem><S.Link href="">About</S.Link></S.MenuItem>
-                <S.MenuItem><S.Link href="">Skills</S.Link></S.MenuItem>
-                <S.MenuItem><S.Link href="">Projects</S.Link></S.MenuItem>
-                <S.MenuItem><S.Link href="">Contact</S.Link></S.MenuItem>
+                {items.map((item,index)=>{
+                    return <S.MenuItem key={index}><S.NavLink to={item.href} smooth={true} spy={true} key={index}>{item.title}</S.NavLink></S.MenuItem>
+                })}
             </ul>
         </S.DesktopNav>
     );
 };
-
 
 
 

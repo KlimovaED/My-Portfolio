@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {font} from "../../../styles/Common";
 
-const Contatti = styled.section`
+const Contact = styled.section`
     width: 80%;
     margin: 0 auto 0;
     min-height: 100vh;
@@ -51,5 +51,5 @@ const  Input = styled.input`
 `;
 
 export const S = {
-    Contatti,Form,Input
+    Contact,Form,Input
 }

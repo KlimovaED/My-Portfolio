@@ -43,7 +43,7 @@ const skillData = [
 ]
 export const Skills = () => {
     return (
-        <StyledSkills>
+        <StyledSkills id="skills">
             <SectionTitle>My Skills</SectionTitle>
             <FlexWrapper justify={"center"} align={"center"} wrap={"wrap"} gap={"30px 3%"}>
                 {
