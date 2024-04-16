@@ -2,6 +2,7 @@ import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {font} from "../../../styles/Common";
 import {Link} from "react-scroll";
+import {motion} from "framer-motion";
 
 const MobileMenu= styled.div<{isOpen:boolean}>`
     position: fixed;
@@ -32,12 +33,14 @@ const MobileNav= styled.nav`
     }
 `;
 
-const MenuItem = styled.li`
+const MenuItem = styled(motion.li)`
 `;
 
 const NavLink = styled(Link)`
     ${font({family:"DM Sans",weight: 500, Fmax:20, Fmin:20, color: `${theme.colors.fontColor}`})};
     cursor: pointer;
+    transition: ${theme.animation.transition};
+    
  
     &:hover {
         border-bottom: 1px solid #bf3fa2;

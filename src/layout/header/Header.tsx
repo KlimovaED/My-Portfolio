@@ -4,9 +4,9 @@ import {HeaderMenuDesktop} from "./HeaderMenu/headerMenuDesktop/HeaderMenuDeskto
 import {HeaderMenuMobile} from "./HeaderMenu/headerMenuMobile/HeaderMenuMobile";
 import {S} from './Header_Styles';
 
-
 export const Header: React.FC = () => {
     const [menuIsOpen, setMenuIsOpen] = useState(false);
+
 
     const onBurgerBtnClick = () => {
         setMenuIsOpen(!menuIsOpen)

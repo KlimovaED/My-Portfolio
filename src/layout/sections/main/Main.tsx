@@ -2,7 +2,8 @@ import React from 'react';
 import photo from '../../../assets/images/logo.jpg';
 import figura from '../../../assets/images/Abstract.svg';
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {S} from './Main_Styles'
+import {S} from './Main_Styles';
+
 
 
 export const Main:React.FC = () => {

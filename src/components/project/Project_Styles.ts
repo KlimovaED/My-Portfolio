@@ -3,8 +3,8 @@ import {theme} from "../../styles/Theme";
 import {font} from "../../styles/Common";
 
 const Project = styled.div`
-    max-width: 373px;
-    width: 300px;
+   // max-width: 373px;
+   // width: 300px;
     min-height: 567px;
     height: fit-content;
     display: flex;
@@ -14,7 +14,11 @@ const Project = styled.div`
     border-radius: 20px;
     box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    flex-grow: 1;
+   // flex-grow: 1;
+    @media ${theme.media.mobile} {
+       width: 320px;
+        margin: auto;
+    }
 `;
 const Content = styled.div`
     width: 80%;
@@ -54,6 +58,7 @@ const Link = styled.a`
         background: linear-gradient(to bottom right, ${theme.colors.secondColor} 0%, ${theme.colors.primaryColor} 100%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
+        transition: ${theme.animation.transition};
     }
 `;
 

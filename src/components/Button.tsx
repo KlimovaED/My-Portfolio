@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../styles/Theme";
 
 export  const Button = styled.button`
     margin-top: 5%;
@@ -15,5 +16,6 @@ export  const Button = styled.button`
     cursor: pointer;
 &:hover{
     transform: scale(1.1);
+    transition: ${theme.animation.transition};
 }
 `;
