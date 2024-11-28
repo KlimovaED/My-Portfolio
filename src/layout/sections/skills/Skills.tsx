@@ -4,9 +4,30 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Skill} from "../../../components/skill/Skill";
 import {theme} from "../../../styles/Theme";
+import AliceCarousel from 'react-alice-carousel';
 
 
 const skillData = [
+    {
+        iconId: "nodeJS",
+        title: "NodeJs",
+        vievBox:"-3 -3 140 140"
+    },
+    {
+        iconId: "StoryBook",
+        title: "StoryBook",
+        vievBox:"-3 -3 140 140"
+    },
+    {
+        iconId: "codeRedux",
+        title:"Redux",
+        vievBox:"-5 -5 290 290"
+    },
+    {
+        iconId: "codeTS",
+        title: "TypeScript",
+        vievBox:"-10 -20 290 290"
+    },
     {
         iconId:"codeJs",
         title:"JavaScript"
@@ -43,15 +64,31 @@ const skillData = [
 ]
 export const Skills = () => {
     return (
+        /*   <StyledSkills id="skills">
+                 <SectionTitle>My Skills</SectionTitle>
+                 <FlexWrapper justify={"center"} align={"center"} wrap={"wrap"} gap={"30px 3%"}>
+                     {
+                         skillData.map((s,index)=>{
+                             return <Skill iconId={s.iconId} title={s.title} vievBox={s.vievBox} key={index}/>
+                         })
+                     }
+                 </FlexWrapper>
+             </StyledSkills>*/
         <StyledSkills id="skills">
             <SectionTitle>My Skills</SectionTitle>
-            <FlexWrapper justify={"center"} align={"center"} wrap={"wrap"} gap={"30px 3%"}>
-                {
-                    skillData.map((s,index)=>{
-                        return <Skill iconId={s.iconId} title={s.title} vievBox={s.vievBox} key={index}/>
-                    })
-                }
-            </FlexWrapper>
+            <AliceCarousel
+                mouseTracking
+                items={skillData.map((skill,index) => <Skill iconId={skill.iconId} title={skill.title} vievBox={skill.vievBox} key={index}/>)}
+                responsive={{
+                    0: { items: 1 },
+                    600: { items: 5 },
+                    1024: { items: 9 },
+                }}
+                controlsStrategy="responsive"
+                autoPlay
+                autoPlayInterval={3000}
+                infinite
+            />
         </StyledSkills>
     );
 };
