@@ -6,13 +6,13 @@ import {theme} from "../../styles/Theme";
 export const SocialList:React.FC = () => {
     return (
         <SocialItem>
-            <SocialLink aria-label="GitHub" href="">
+            <SocialLink aria-label="GitHub" href="https://github.com/KlimovaED">
                 <Icon iconId={'iconGitHub'}  width={"30px"} heigth={"30px"} viewBox={"0 0 30 30"} />
             </SocialLink>
-            <SocialLink aria-label="LinkedIn" href="">
+            <SocialLink aria-label="LinkedIn" href="https://www.linkedin.com/in/katerina-klimova-5744192ab/">
                 <Icon iconId={'iconIn'}  width={"30px"} heigth={"30px"} viewBox={"0 0 30 30"}/>
             </SocialLink>
-            <SocialLink aria-label="Twitter" href="">
+            <SocialLink aria-label="Twitter" href="https://t.me/klimovaklimova">
                 <Icon iconId={'iconTwitter'}  width={"30px"} heigth={"30px"} viewBox={"0 0 30 30"}/>
             </SocialLink>
         </SocialItem>

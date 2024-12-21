@@ -62,3 +62,7 @@ const DesktopNav= styled.nav`
 export const S = {
     NavLink,MenuItem,MobileMenu,MobileNav,DesktopNav
 }
+
+export const Nav={
+    NavLink
+}

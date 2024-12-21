@@ -19,3 +19,10 @@ export  const Button = styled.button`
     transition: ${theme.animation.transition};
 }
 `;
+export const ButtonBorder = styled(Button)`
+    border: 3px solid transparent;
+    background: linear-gradient(#000000, #000000) padding-box,
+    linear-gradient(45deg, ${theme.colors.secondColor}, ${theme.colors.primaryColor}) border-box;
+    color: white;
+
+`;

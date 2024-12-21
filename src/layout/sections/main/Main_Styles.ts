@@ -42,20 +42,27 @@ const Text = styled.span`
    `;
 
 
+
 const Photo = styled.img`
+    --b: 12px;
     width: 320px;
     height: 320px;
     object-fit: cover;
     position: absolute;
     border-radius: 230px;
     border: 10px solid transparent;
-    background: linear-gradient(to top right, ${theme.colors.secondColor} 0%, ${theme.colors.primaryColor} 100%);
+    background:
+            linear-gradient(#fff, #fff) padding-box,
+            linear-gradient(45deg, ${theme.colors.secondColor}, ${theme.colors.primaryColor}) border-box;
+
+
     @media ${theme.media.mobile} {
         width: 250px;
         height: 250px;
         margin-top: 10%;
     }
 `;
+
 
 const Figura = styled.img`
     width: 500px;
